@@ -1,6 +1,7 @@
 {
   "BTN_LABEL_BACK": "Zurück",
   "BTN_LABEL_CANCEL": "Abbrechen",
+  "BTN_LABEL_CONFIRM_PRINT": "1 Bild drucken | {count} Bilder drucken",
   "BTN_LABEL_DELETE_IMAGE": "Löschen",
   "BTN_LABEL_DELETE_ALL_MEDIA_FILES": "Alle Medien-Dateien löschen",
   "BTN_LABEL_FILES_CREATE_NEW_FOLDER": "Ordner erstellen",
@@ -20,6 +21,7 @@
   "BTN_LABEL_MAINPAGE_TAKE_PHOTO": "Foto",
   "BTN_LABEL_MAINPAGE_TAKE_VIDEO": "Video",
   "BTN_LABEL_PERSIST_CONFIG": "Speichern",
+  "BTN_LABEL_PRINT_IMAGE": "Drucken",
   "BTN_LABEL_REBOOT": "Neu starten",
   "BTN_LABEL_REBOOT_HOST": "Host neu starten",
   "BTN_LABEL_RELOAD_PAGE": "Neu laden",
@@ -40,6 +42,7 @@
   "MSG_CONFIRM_DELETE_ALL_MEDIA_FILES": "Wirklich alle Medien-Dateien aus der Gallerie löschen?",
   "MSG_CONFIRM_DELETE_IMAGE": "Bild wirklich löschen?",
   "MSG_CONFIRM_INSTALL_SERVICE": "Service wirklich installieren?",
+  "MSG_CONFIRM_PRINT_IMAGE": "Bild jetzt drucken? | {count} Bilder jetzt drucken?",
   "MSG_CONFIRM_SHUTDOWN": "System wirklich herunterfahren?",
   "MSG_CONFIRM_REBOOT": "System wirklich neu starten?",
   "MSG_CONFIRM_RELOAD_SERVICE": "Service wirklich neu laden?",

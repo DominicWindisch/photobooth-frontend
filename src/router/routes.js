@@ -22,6 +22,12 @@ const routes = [
     children: [{ path: "", component: () => import("pages/GalleryPage.vue") }],
   },
   {
+    // gallery route
+    path: "/gallery",
+    component: () => import("layouts/PrintSelectLayout.vue"),
+    children: [{ path: "print/:selectedItemId?", component: () => import("pages/PrintSelectPage.vue") }],
+  },
+  {
     // extended layout for admins
     path: "/admin",
     //TODO: implement route guard: https://dev.to/rachel_cheuk/part-1-user-roles-and-management-quasar-8jp

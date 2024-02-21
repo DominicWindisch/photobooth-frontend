@@ -1,6 +1,7 @@
 {
   "BTN_LABEL_BACK": "Back",
   "BTN_LABEL_CANCEL": "Cancel",
+  "BTN_LABEL_CONFIRM_PRINT": "Print 1 image | Print {count} images",
   "BTN_LABEL_DELETE_IMAGE": "Delete",
   "BTN_LABEL_DELETE_ALL_MEDIA_FILES": "Delete all media files",
   "BTN_LABEL_FILES_CREATE_NEW_FOLDER": "Create folder",
@@ -20,6 +21,7 @@
   "BTN_LABEL_MAINPAGE_TAKE_PHOTO": "Take a picture",
   "BTN_LABEL_MAINPAGE_TAKE_VIDEO": "Capture a video",
   "BTN_LABEL_PERSIST_CONFIG": "Save",
+  "BTN_LABEL_PRINT_IMAGE": "Print",
   "BTN_LABEL_REBOOT": "Reboot",
   "BTN_LABEL_REBOOT_HOST": "Reboot host",
   "BTN_LABEL_RELOAD_PAGE": "Reload",
@@ -41,6 +43,7 @@
   "MSG_CONFIRM_DELETE_ALL_MEDIA_FILES": "Are you sure to delete all media items from gallery?",
   "MSG_CONFIRM_DELETE_IMAGE": "Are you sure to delete the image?",
   "MSG_CONFIRM_INSTALL_SERVICE": "You sure to install the service?",
+  "MSG_CONFIRM_PRINT_IMAGE": "Print image now? | Print {count} images now?",
   "MSG_CONFIRM_SHUTDOWN": "You sure to shutdown the system?",
   "MSG_CONFIRM_REBOOT": "You sure to reboot the system?",
   "MSG_CONFIRM_RELOAD_SERVICE": "You sure to reload the service?",

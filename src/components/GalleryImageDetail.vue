@@ -50,13 +50,53 @@
           "
         />
         <q-btn
-          v-if="uiSettingsStore.uiSettings.gallery_show_print"
+          v-if="
+            uiSettingsStore.uiSettings.gallery_show_print &&
+            singleItemView &&
+            (this.itemRepository[0].media_type == 'image' || this.itemRepository[0].media_type == 'collage')
+          "
           flat
           class="q-mr-sm"
           icon="print"
           :label="$t('BTN_LABEL_GALLERY_PRINT')"
-          @click="printItem(currentSlideId)"
+          @click="confirmPrintSingle = true"
         />
+
+        <q-dialog v-model="confirmPrintSingle">
+          <q-card class="q-pa-sm" style="min-width: 350px" id="gallery-confirm-print-dialog">
+            <q-card-section class="row items-center">
+              <q-avatar icon="delete" color="primary" text-color="white" />
+              <span class="q-ml-sm">{{ $t("MSG_CONFIRM_PRINT_IMAGE") }}</span>
+            </q-card-section>
+
+            <q-card-actions align="right">
+              <q-btn flat :label="$t('BTN_LABEL_CANCEL')" v-close-popup />
+              <q-btn
+                :label="$t('BTN_LABEL_PRINT_IMAGE')"
+                color="primary"
+                v-close-popup
+                @click="
+                  printItem(currentSlideId);
+                  $emit('closeEvent');
+                "
+              />
+            </q-card-actions>
+          </q-card>
+        </q-dialog>
+
+        <q-btn
+          v-if="
+            uiSettingsStore.uiSettings.gallery_show_print &&
+            !singleItemView &&
+            (this.itemRepository[currentSlideIndex].media_type == 'image' || this.itemRepository[currentSlideIndex].media_type == 'collage')
+          "
+          flat
+          class="q-mr-sm"
+          icon="print"
+          :label="$t('BTN_LABEL_GALLERY_PRINT')"
+          :to="`/gallery/print/${currentSlideIndex}`"
+        />
+
         <q-btn
           v-if="uiSettingsStore.uiSettings.gallery_show_filter && uiSettingsStore.uiSettings.gallery_filter_userselectable.length > 0"
           flat
@@ -346,6 +386,7 @@ export default {
       showFilterDialog: ref(false),
       displayLoadingSpinner: ref(false),
       confirmDeleteFile: ref(false),
+      confirmPrintSingle: ref(false),
       rightDrawerOpen,
       toggleRightDrawer() {
         rightDrawerOpen.value = !rightDrawerOpen.value;

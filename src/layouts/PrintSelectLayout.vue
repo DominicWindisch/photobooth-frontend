@@ -1,0 +1,28 @@
+<template>
+  <q-layout view="hHh lpR fFf">
+    <q-page-container>
+      <router-view />
+
+      <q-page-sticky position="top-left" :offset="[25, 25]">
+        <div class="q-gutter-sm">
+          <q-btn color="primary" rounded no-caps to="/gallery" class="action-button" id="print-select-button-to-gallery">
+            <q-icon left name="arrow_back_ios_new" />
+            <div>{{ $t("BTN_LABEL_CANCEL") }}</div>
+          </q-btn>
+        </div>
+      </q-page-sticky>
+    </q-page-container>
+  </q-layout>
+</template>
+
+<script>
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "GalleryLayout",
+
+  components: {},
+  computed: {},
+  setup() {},
+});
+</script>
