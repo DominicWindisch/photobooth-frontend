@@ -105,7 +105,7 @@ export default {
   mounted() {
     let initialIndex = parseInt(this.$route.params.selectedItemId);
 
-    if (initialIndex) {
+    if (initialIndex != undefined) {
       // auto-select initial item
       this.toggleSelectPic(initialIndex);
 
